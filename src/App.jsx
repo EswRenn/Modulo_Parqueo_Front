@@ -4,6 +4,7 @@ import Matutina from './components/Matutina';
 import Vespertina from './components/Vespertina';
 import Nocturna from './components/Nocturna';
 import Sabado from './components/Sabado';
+import Domingo from './components/Domingo';
 
 function App() {
   const [selectedTurno, setSelectedTurno] = useState('Matutina'); // Estado para controlar la selección
@@ -22,6 +23,7 @@ function App() {
           <option value="Vespertina">Turno Vespertino</option>
           <option value="Nocturna">Turno Nocturno</option>
           <option value="Sabado">Turno Sabado</option>
+          <option value="Domingo">Turno Domingo</option>
         </select>
       </div>
 
@@ -51,6 +53,14 @@ function App() {
             <Sabado />
           </div>
         )}
+         
+         {selectedTurno === 'Domingo' && (
+          <div>
+            <h2>Turno Domingo</h2>
+            <Domingo/>
+          </div>
+        )}  
+
       </div>
     </div>
   );
